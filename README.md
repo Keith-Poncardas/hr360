@@ -20,6 +20,10 @@ git clone https://github.com/Keith-Poncardas/hr360.git
 cd your-repository
 ```
 
+## How to Clone Repository?
+
+[YouTube Channel](https://www.youtube.com/watch?v=EhxPBMQFCaI)
+
 ### 2. Install Dependencies
 
 Using npm:
