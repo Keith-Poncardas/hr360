@@ -7,7 +7,7 @@ const getDashboard = (req, res) => {
     }
   };
 
-  res.render('dashboard', { ...structure });
+  res.render('main/dashboard', { ...structure });
 };
 
 const getEmployees = (req, res) => {
@@ -18,7 +18,7 @@ const getEmployees = (req, res) => {
     }
   };
 
-  res.render('employees', { ...structure });
+  res.render('main/employees', { ...structure });
 };
 
 const getRecruitment = (req, res) => {
@@ -29,7 +29,7 @@ const getRecruitment = (req, res) => {
     }
   };
 
-  res.render('recruitment', { ...structure });
+  res.render('main/recruitment', { ...structure });
 };
 
 const getSetting = (req, res) => {
@@ -40,7 +40,7 @@ const getSetting = (req, res) => {
     }
   };
 
-  res.render('setting', { ...structure });
+  res.render('main/setting', { ...structure });
 };
 
 const getCalendar = (req, res) => {
@@ -51,7 +51,7 @@ const getCalendar = (req, res) => {
     }
   };
 
-  res.render('calendar', { ...structure });
+  res.render('main/calendar', { ...structure });
 };
 
 module.exports = { getDashboard, getEmployees, getRecruitment, getSetting, getCalendar };

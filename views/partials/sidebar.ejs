@@ -1,48 +1,46 @@
- <!-- Mobile Menu Button -->
- <div class="lg:hidden fixed top-4 left-4 z-50">
-   <button onclick="toggleSidebar()" class="p-2 bg-white rounded-lg shadow-lg">
-     <i class="fas fa-bars text-gray-600"></i>
-   </button>
- </div>
+<% 
+const menuItems = [
+  { href: '/', icon: 'fas fa-chart-line', text: 'Dashboard' },
+  { href: '/hr/employees', icon: 'fas fa-users', text: 'Employees' },
+  { href: '/hr/recruitment', icon: 'fas fa-user-plus', text: 'Recruitment' },
+  { href: '/hr/calendar', icon: 'fas fa-calendar', text: 'Calendar' },
+  { href: '/hr/setting', icon: 'fas fa-cog', text: 'Settings' }
+];
+%>
 
- <div class="flex min-h-screen relative">
-   <!-- Sidebar -->
-   <div id="sidebar" class="fixed lg:relative w-64 bg-white shadow-lg h-screen lg:h-screen lg:sticky top-0 transition-transform duration-300 ease-in-out transform -translate-x-full lg:translate-x-0 z-40">
-     <div class="p-4">
-       <div class="flex items-center gap-2 mb-8">
-         <img src="/public/logo/hrLogo.png" alt="HR 360 Logo" class="h-24">
-       </div>
+<!-- Mobile Menu Button -->
+<div class="lg:hidden fixed top-4 left-4 z-50">
+  <button onclick="toggleSidebar()" class="p-2 bg-white rounded-lg shadow-lg">
+    <i class="fas fa-bars text-gray-600"></i>
+  </button>
+</div>
 
-       <div class="mb-8">
-         <div class="flex items-center gap-3 mb-4">
-           <img src="https://plus.unsplash.com/premium_photo-1689568158814-3b8e9c1a9618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-10 h-10 p-1 rounded-full" alt="Profile" />
-           <div>
-             <p class="font-semibold">Tori</p>
-             <p class="text-sm text-gray-500">Manager</p>
-           </div>
-         </div>
-       </div>
-       <nav>
-         <a href="/" class="flex items-center gap-3 p-3 <%= path === '/' ? 'text-blue-500 bg-blue-50' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg mb-3">
-           <i class="fas fa-chart-line"></i>
-           <span>Dashboard</span>
-         </a>
-         <a href="/hr/employees" class="flex items-center gap-3 p-3 <%= path === '/employees' ? 'text-blue-500 bg-blue-50' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg mb-3">
-           <i class="fas fa-users"></i>
-           <span>Employees</span>
-         </a>
-         <a href="/hr/recruitment" class="flex items-center gap-3 p-3 <%= path === '/recruitment' ? 'text-blue-500 bg-blue-50' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg mb-3">
-           <i class="fas fa-user-plus"></i>
-           <span>Recruitment</span>
-         </a>
-         <a href="/hr/calendar" class="flex items-center gap-3 p-3 <%= path === '/calendar' ? 'text-blue-500 bg-blue-50' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg mb-3">
-           <i class="fas fa-calendar"></i>
-           <span>Calendar</span>
-         </a>
-         <a href="/hr/setting" class="flex items-center gap-3 p-3 <%= path === '/setting' ? 'text-blue-500 bg-blue-50' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg">
-           <i class="fas fa-cog"></i>
-           <span>Settings</span>
-         </a>
-       </nav>
-     </div>
-   </div>
+<div class="flex min-h-screen relative">
+  <!-- Sidebar -->
+  <div id="sidebar" class="fixed lg:relative w-64 bg-white shadow-lg h-screen lg:h-screen lg:sticky top-0 transition-transform duration-300 ease-in-out transform -translate-x-full lg:translate-x-0 z-40">
+    <div class="p-4">
+      <div class="flex items-center gap-2 mb-8">
+        <img src="/public/logo/hrLogo.png" alt="HR 360 Logo" class="h-24" onclick="window.location = '/'" style="cursor: pointer;">
+      </div>
+
+      <div class="mb-8">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://plus.unsplash.com/premium_photo-1689568158814-3b8e9c1a9618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-10 h-10 p-1 rounded-full" alt="Profile" />
+          <div>
+            <p class="font-semibold">Tori</p>
+            <p class="text-sm text-gray-500">Manager</p>
+          </div>
+        </div>
+      </div>
+
+      <nav class="space-y-4">
+        <% menuItems.forEach(item => { %>
+        <a href="<%= item.href %>" class="flex items-center gap-3 p-4 <%= path.replace('/hr', '') === item.href.replace('/hr', '') ? 'text-blue-500 bg-blue-50 border-l-4 border-blue-500' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg">
+          <i class="<%= item.icon %> text-xl"></i>
+          <span><%= item.text %></span>
+        </a>
+        <% }); %>
+      </nav>
+
+    </div>
+  </div>
