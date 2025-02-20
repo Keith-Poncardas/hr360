@@ -29,13 +29,13 @@ cd your-repository
 Using npm:
 
 ```bash
-npm install
+npm i
 ```
 
-Or using yarn:
+or 
 
 ```bash
-yarn install
+npm install
 ```
 
 ### 3. Start the Application
