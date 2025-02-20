@@ -2,7 +2,7 @@
 
 ## Description
 This project was develop by Keith Ralph Robles Poncardas.
-This project is a client-side-only HR Management System (or similar application) developed using Express.js. The design was originally created in Figma and later converted into code. There is no backend setup included in this application; it focuses solely on the frontend functionality.
+This project is a client-side-only HR Management System developed using Express.js. The design was originally created in Figma and later converted into code. There is no backend setup included in this application; it focuses solely on the frontend functionality.
 
 ## Prerequisites
 Before installing, ensure you have the following installed on your system:
