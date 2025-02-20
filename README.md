@@ -1,4 +1,4 @@
-# Project Name
+# HR 360 - Magdalene
 
 ## Description
 This project was develop by Keith Ralph Robles Poncardas.
