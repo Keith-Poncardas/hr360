@@ -22,7 +22,7 @@ cd your-repository
 
 ## How to Clone Repository?
 
-[YouTube Channel](https://www.youtube.com/watch?v=EhxPBMQFCaI)
+[How to clone repo on Github?](https://www.youtube.com/watch?v=EhxPBMQFCaI)
 
 ### 2. Install Dependencies
 
