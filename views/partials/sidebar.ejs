@@ -33,7 +33,7 @@ const menuItems = [
         </div>
       </div>
 
-      <nav class="space-y-4">
+      <nav class="space-y-3">
         <% menuItems.forEach(item => { %>
         <a href="<%= item.href %>" class="flex items-center gap-3 p-4 <%= path.replace('/hr', '') === item.href.replace('/hr', '') ? 'text-blue-500 bg-blue-50 border-l-4 border-blue-500' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg">
           <i class="<%= item.icon %> text-xl"></i>

@@ -1,52 +1,201 @@
-    <!-- Review Table -->
-    <div class="bg-white rounded-lg shadow overflow-hidden">
-      <div class="p-4 lg:p-6">
-        <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 gap-4">
-          <h2 class="text-lg font-semibold">Review</h2>
-          <div class="relative w-full lg:w-64">
-            <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 border rounded-lg">
-            <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-          </div>
-        </div>
-        <div class="overflow-x-auto">
-          <table class="w-full min-w-[800px]">
-            <thead>
-              <tr class="text-left text-gray-500">
-                <th class="pb-4">Name</th>
-                <th class="pb-4">Position</th>
-                <th class="pb-4">Date Applied</th>
-                <th class="pb-4">Status</th>
-                <th class="pb-4">Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr class="border-t">
-                <td class="py-4">
-                  <div class="flex items-center gap-3">
-                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-10 h-10 p-1 rounded-full m-2" alt="Profile" />
-                    <div>
-                      <p class="font-semibold">Tanner Finsha</p>
-                      <p class="text-sm text-gray-500">@tannerfinsha@gmail.com</p>
-                    </div>
-                  </div>
-                </td>
-                <td class="py-4">
-                  <p>Product Designer</p>
-                  <p class="text-sm text-gray-500">Full time</p>
-                </td>
-                <td class="py-4">
-                  <p>Nov 2, 2024</p>
-                  <p class="text-sm text-gray-500">18:15</p>
-                </td>
-                <td class="py-4">
-                  <span class="px-3 py-1 bg-green-100 text-green-600 rounded-full text-sm">Done Interview</span>
-                </td>
-                <td class="py-4">
-                  <button class="text-blue-500">View Resume</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+<% 
+const applicants = [
+  {
+    name: "Tanner Finsha",
+    email: "tannerfinsha@gmail.com",
+    image: "https://i.pravatar.cc/40?img=17",
+    position: {
+      title: "Product Designer",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 2, 2024",
+      time: "18:15"
+    },
+    status: {
+      text: "Done Interview",
+      color: {
+        bg: "bg-green-100",
+        text: "text-green-600"
+      }
+    }
+  },
+  {
+    name: "Maria Rodriguez",
+    email: "maria.r@gmail.com",
+    image: "https://i.pravatar.cc/40?img=18",
+    position: {
+      title: "UX Researcher",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 1, 2024",
+      time: "14:30"
+    },
+    status: {
+      text: "Screening",
+      color: {
+        bg: "bg-blue-100",
+        text: "text-blue-600"
+      }
+    }
+  },
+  {
+    name: "James Carter",
+    email: "james.carter@gmail.com",
+    image: "https://i.pravatar.cc/40?img=19",
+    position: {
+      title: "Frontend Developer",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 5, 2024",
+      time: "10:00"
+    },
+    status: {
+      text: "Shortlisted",
+      color: {
+        bg: "bg-yellow-100",
+        text: "text-yellow-600"
+      }
+    }
+  },
+  {
+    name: "Emma Johnson",
+    email: "emma.johnson@gmail.com",
+    image: "https://i.pravatar.cc/40?img=20",
+    position: {
+      title: "HR Specialist",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 3, 2024",
+      time: "16:45"
+    },
+    status: {
+      text: "Pending Review",
+      color: {
+        bg: "bg-gray-100",
+        text: "text-gray-600"
+      }
+    }
+  },
+  {
+    name: "Liam Anderson",
+    email: "liam.anderson@gmail.com",
+    image: "https://i.pravatar.cc/40?img=21",
+    position: {
+      title: "Backend Developer",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 6, 2024",
+      time: "09:20"
+    },
+    status: {
+      text: "Rejected",
+      color: {
+        bg: "bg-red-100",
+        text: "text-red-600"
+      }
+    }
+  },
+  {
+    name: "Sophia Lee",
+    email: "sophia.lee@gmail.com",
+    image: "https://i.pravatar.cc/40?img=22",
+    position: {
+      title: "Support Specialist",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 7, 2024",
+      time: "13:10"
+    },
+    status: {
+      text: "Hired",
+      color: {
+        bg: "bg-green-200",
+        text: "text-green-700"
+      }
+    }
+  },
+  {
+    name: "Daniel Kim",
+    email: "daniel.kim@gmail.com",
+    image: "https://i.pravatar.cc/40?img=23",
+    position: {
+      title: "Financial Analyst",
+      type: "Full time"
+    },
+    applicationDate: {
+      date: "Nov 4, 2024",
+      time: "15:30"
+    },
+    status: {
+      text: "Interview Scheduled",
+      color: {
+        bg: "bg-purple-100",
+        text: "text-purple-600"
+      }
+    }
+  }
+]; 
+%>
+
+<!-- Review Table -->
+<div class="bg-white rounded-lg shadow overflow-hidden">
+  <div class="p-4 lg:p-6">
+    <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-6 gap-4">
+      <h2 class="text-lg font-semibold">Review</h2>
+      <div class="relative w-full lg:w-64">
+        <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 border rounded-lg">
+        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
       </div>
     </div>
+    <div class="overflow-x-auto">
+      <table class="w-full min-w-[800px]">
+        <thead>
+          <tr class="text-left text-gray-500">
+            <th class="pb-4">Name</th>
+            <th class="pb-4">Position</th>
+            <th class="pb-4">Date Applied</th>
+            <th class="pb-4">Status</th>
+            <th class="pb-4">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% applicants.forEach(applicant => { %>
+          <tr class="border-t">
+            <td class="py-4">
+              <div class="flex items-center gap-3">
+                <img src="<%= applicant.image %>" class="w-10 h-10 p-1 rounded-full m-2" alt="<%= applicant.name %>" />
+                <div>
+                  <p class="font-semibold"><%= applicant.name %></p>
+                  <p class="text-sm text-gray-500">@<%= applicant.email %></p>
+                </div>
+              </div>
+            </td>
+            <td class="py-4">
+              <p><%= applicant.position.title %></p>
+              <p class="text-sm text-gray-500"><%= applicant.position.type %></p>
+            </td>
+            <td class="py-4">
+              <p><%= applicant.applicationDate.date %></p>
+              <p class="text-sm text-gray-500"><%= applicant.applicationDate.time %></p>
+            </td>
+            <td class="py-4">
+              <span class="px-3 py-1 <%= applicant.status.color.bg %> <%= applicant.status.color.text %> rounded-full text-sm">
+                <%= applicant.status.text %>
+              </span>
+            </td>
+            <td class="py-4">
+              <button class="text-blue-500">View Resume</button>
+            </td>
+          </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
