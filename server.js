@@ -6,6 +6,9 @@ const minifyHTML = require("express-minify-html");
 const app = express();
 const PORT = 3000;
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(
   minifyHTML({
     override: true,
