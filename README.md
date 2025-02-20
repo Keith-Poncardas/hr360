@@ -46,12 +46,6 @@ For development:
 nodemon server.js
 ```
 
-For production:
-
-```bash
-npm start
-```
-
 ### 4. Access the Application
 
 Once the server is running, open your browser and go to:
@@ -62,6 +56,4 @@ http://localhost:3000
 
 (Adjust the port if necessary)
 
-## Usage
-Provide instructions on how to use your application.
 
