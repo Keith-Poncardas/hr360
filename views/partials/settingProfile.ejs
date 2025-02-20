@@ -1,0 +1,48 @@
+  <!-- Profile Settings -->
+  <div class="bg-white rounded-lg shadow-sm p-6">
+    <h2 class="text-lg font-semibold mb-1">Profile</h2>
+    <p class="text-gray-500 text-sm mb-6">Update your photo and personal details here.</p>
+
+    <form>
+      <!-- Profile Photo -->
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-2">Your photo</label>
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-4">
+            <img src="https://plus.unsplash.com/premium_photo-1689568158814-3b8e9c1a9618?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="w-10 h-10 p-1 rounded-full" alt="Profile" />
+            <p class="text-sm text-gray-500">This will be displayed on your profile.</p>
+          </div>
+          <div class="flex gap-3">
+            <button type="button" class="px-3 py-2 text-sm text-gray-600 hover:text-gray-800">Delete</button>
+            <button type="button" class="px-3 py-2 text-sm text-blue-500 hover:text-blue-600">Update</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-2">Your bio</label>
+        <p class="text-sm text-gray-500 mb-2">Write a short introduction.</p>
+        <textarea class="w-full p-3 border rounded-lg resize-none" rows="4" placeholder="Write your bio here...">Hi, I'm Tori, the HR Manager. With a passion for fostering a positive work environment and supporting employees' growth, I aim to create a culture where everyone can thrive. I focus on managing HR processes efficiently, ensuring that our team stays motivated, engaged, and aligned with the company's goals.</textarea>
+        <p class="text-sm text-gray-500 mt-1">66 characters left</p>
+      </div>
+
+      <!-- Job Title -->
+      <div class="mb-6">
+        <label class="block text-sm font-medium mb-2">Job title</label>
+        <input type="text" class="w-full p-3 border rounded-lg" value="HR Manager" />
+        <div class="mt-4">
+          <label class="flex items-center gap-2">
+            <input type="checkbox" checked class="rounded text-blue-500" />
+            <span class="text-sm text-gray-600">Show my job title in my profile</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="flex gap-4 mt-8">
+        <button type="submit" class="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 w-full">SAVE</button>
+        <button type="button" class="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 w-full">CANCEL</button>
+      </div>
+    </form>
+  </div>
