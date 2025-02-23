@@ -4,7 +4,7 @@ const menuItems = [
   { href: '/hr/employees', icon: 'fas fa-users', text: 'Employees' },
   { href: '/hr/recruitment', icon: 'fas fa-user-plus', text: 'Recruitment' },
   { href: '/hr/calendar', icon: 'fas fa-calendar', text: 'Calendar' },
-  { href: '/hr/setting', icon: 'fas fa-cog', text: 'Settings' }
+  { href: '/hr/setting', icon: 'fas fa-cog', text: 'Settings' },
 ];
 %>
 
@@ -31,9 +31,9 @@ const menuItems = [
 
       <nav class="space-y-3">
         <% menuItems.forEach(item => { %>
-        <a href="<%= item.href %>" class="flex items-center gap-3 p-4 <%= path.replace('/hr', '') === item.href.replace('/hr', '') ? 'text-blue-500 bg-blue-50 border-l-4 border-blue-500' : 'text-gray-700 hover:bg-gray-50' %> rounded-lg">
+        <a href="<%= item.href %>" class="flex items-center gap-3 p-4 <%= path.replace('/hr', '') === item.href.replace('/hr', '') ? 'text-blue-500 bg-blue-50 border-l-4 border-blue-500' : 'text-gray-700 hover:bg-gray-100' %> rounded-lg transition-colors duration-200 ease-in-out">
           <i class="<%= item.icon %> text-xl"></i>
-          <span><%= item.text %></span>
+          <span class="font-medium"><%= item.text %></span>
         </a>
         <% }); %>
       </nav>

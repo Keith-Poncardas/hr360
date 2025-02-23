@@ -54,4 +54,8 @@ const getCalendar = (req, res) => {
   res.render('main/calendar', { ...structure });
 };
 
-module.exports = { getDashboard, getEmployees, getRecruitment, getSetting, getCalendar };
+const getLogin = (req, res) => {
+  res.render('main/login');
+}
+
+module.exports = { getDashboard, getEmployees, getRecruitment, getSetting, getCalendar, getLogin };
